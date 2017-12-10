@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C79D4368F060E1B011327A0 /* Pods_RegExp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB280C21FA673CC8EE44913 /* Pods_RegExp.framework */; };
 		C7A0DC9F1FDC43A700674FF4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0DC9E1FDC43A700674FF4 /* main.swift */; };
+		C7DE2C5D1FDD4EBE00009922 /* XYNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2C5C1FDD4EBE00009922 /* XYNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3DB1090DD34BC248A40264DA /* Pods-RegExp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegExp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RegExp/Pods-RegExp.release.xcconfig"; sourceTree = "<group>"; };
+		BEB280C21FA673CC8EE44913 /* Pods_RegExp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RegExp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A0DC9B1FDC43A700674FF4 /* RegExp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RegExp; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A0DC9E1FDC43A700674FF4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C7DE2C5C1FDD4EBE00009922 /* XYNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYNetworkManager.swift; sourceTree = "<group>"; };
+		FC9A4924A0646D202C284BA5 /* Pods-RegExp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegExp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RegExp/Pods-RegExp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C79D4368F060E1B011327A0 /* Pods_RegExp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AC64D624597148D58209A78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC9A4924A0646D202C284BA5 /* Pods-RegExp.debug.xcconfig */,
+				3DB1090DD34BC248A40264DA /* Pods-RegExp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B901F670F4CD6EF2FA303A5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEB280C21FA673CC8EE44913 /* Pods_RegExp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7A0DC921FDC43A700674FF4 = {
 			isa = PBXGroup;
 			children = (
 				C7A0DC9D1FDC43A700674FF4 /* RegExp */,
 				C7A0DC9C1FDC43A700674FF4 /* Products */,
+				6AC64D624597148D58209A78 /* Pods */,
+				B901F670F4CD6EF2FA303A5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +83,18 @@
 		C7A0DC9D1FDC43A700674FF4 /* RegExp */ = {
 			isa = PBXGroup;
 			children = (
+				C7DE2C5B1FDD4E9B00009922 /* Network */,
 				C7A0DC9E1FDC43A700674FF4 /* main.swift */,
 			);
 			path = RegExp;
+			sourceTree = "<group>";
+		};
+		C7DE2C5B1FDD4E9B00009922 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE2C5C1FDD4EBE00009922 /* XYNetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7A0DCA21FDC43A700674FF4 /* Build configuration list for PBXNativeTarget "RegExp" */;
 			buildPhases = (
+				2CEA5620D61C6298D98D01F2 /* [CP] Check Pods Manifest.lock */,
 				C7A0DC971FDC43A700674FF4 /* Sources */,
 				C7A0DC981FDC43A700674FF4 /* Frameworks */,
 				C7A0DC991FDC43A700674FF4 /* CopyFiles */,
+				40A5756FACF80302CFC64BF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -115,12 +152,49 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CEA5620D61C6298D98D01F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RegExp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40A5756FACF80302CFC64BF4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RegExp/Pods-RegExp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C7A0DC971FDC43A700674FF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C7A0DC9F1FDC43A700674FF4 /* main.swift in Sources */,
+				C7DE2C5D1FDD4EBE00009922 /* XYNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +309,7 @@
 		};
 		C7A0DCA31FDC43A700674FF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC9A4924A0646D202C284BA5 /* Pods-RegExp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -244,6 +319,7 @@
 		};
 		C7A0DCA41FDC43A700674FF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DB1090DD34BC248A40264DA /* Pods-RegExp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
