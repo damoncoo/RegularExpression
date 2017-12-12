@@ -9,7 +9,7 @@
 
 import Cocoa
 
-class XYNetworkManager: NSObject {
+class XYRequestManager: NSObject {
     
     
 }

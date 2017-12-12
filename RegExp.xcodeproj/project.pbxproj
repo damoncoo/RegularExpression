@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		9C79D4368F060E1B011327A0 /* Pods_RegExp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB280C21FA673CC8EE44913 /* Pods_RegExp.framework */; };
 		C7A0DC9F1FDC43A700674FF4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0DC9E1FDC43A700674FF4 /* main.swift */; };
-		C7DE2C5D1FDD4EBE00009922 /* XYNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2C5C1FDD4EBE00009922 /* XYNetworkManager.swift */; };
+		C7C94A9B1FDF73690030CE57 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C94A9A1FDF73690030CE57 /* Cocoa.framework */; };
+		C7DE2C5D1FDD4EBE00009922 /* XYRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DE2C5C1FDD4EBE00009922 /* XYRequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +30,10 @@
 		BEB280C21FA673CC8EE44913 /* Pods_RegExp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RegExp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A0DC9B1FDC43A700674FF4 /* RegExp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RegExp; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A0DC9E1FDC43A700674FF4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		C7DE2C5C1FDD4EBE00009922 /* XYNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYNetworkManager.swift; sourceTree = "<group>"; };
+		C7C94A991FDF733A0030CE57 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C94A9A1FDF73690030CE57 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C7C94A9D1FDF77B00030CE57 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7DE2C5C1FDD4EBE00009922 /* XYRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYRequestManager.swift; sourceTree = "<group>"; };
 		FC9A4924A0646D202C284BA5 /* Pods-RegExp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegExp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RegExp/Pods-RegExp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C94A9B1FDF73690030CE57 /* Cocoa.framework in Frameworks */,
 				9C79D4368F060E1B011327A0 /* Pods_RegExp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +62,9 @@
 		B901F670F4CD6EF2FA303A5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C7C94A9D1FDF77B00030CE57 /* Alamofire.framework */,
+				C7C94A9A1FDF73690030CE57 /* Cocoa.framework */,
+				C7C94A991FDF733A0030CE57 /* Alamofire.framework */,
 				BEB280C21FA673CC8EE44913 /* Pods_RegExp.framework */,
 			);
 			name = Frameworks;
@@ -92,7 +100,7 @@
 		C7DE2C5B1FDD4E9B00009922 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C7DE2C5C1FDD4EBE00009922 /* XYNetworkManager.swift */,
+				C7DE2C5C1FDD4EBE00009922 /* XYRequestManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -194,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A0DC9F1FDC43A700674FF4 /* main.swift in Sources */,
-				C7DE2C5D1FDD4EBE00009922 /* XYNetworkManager.swift in Sources */,
+				C7DE2C5D1FDD4EBE00009922 /* XYRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
