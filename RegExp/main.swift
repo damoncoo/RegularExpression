@@ -38,7 +38,7 @@ func isValidPhone() {
 func isValidEmail(email : String) ->Bool {
     
     var isMath = false
-    let emailRegEx = "((^[0-9]{6,})|(^[a-zA-Z]+([-_][a-z0-9A-Z]+)?))@([a-z0-9A-Z]+([-]?[a-z0-9A-Z]+)*\\.)+([a-zA-Z]){2,64}$"
+    let emailRegEx = "((^[0-9]{6,})|(^[a-zA-Z]+([-_][a-z0-9A-Z]+)?))@([a-z0-9A-Z]+([-]?[a-z0-9A-Z]+)*\\.)+([a-zA-Z]){2,4}$"
     let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
     isMath = predicate.evaluate(with: email)
     return isMath
@@ -48,7 +48,7 @@ func isValidHttpUrl(url : String) -> Bool {
     
     var isMath = false
     let u = url
-    let regStr = "http(s)?://(www.)?[a-z0-9]+"
+    let regStr = "http(s)?://([a-z0-9A-Z]+([-]?[a-z0-9A-Z]+)*\\.)+([a-zA-Z]){2,4}(:[0-9]{1,5})?(/[0-9A-Za-z\\.]+)*(\\?)?[0-9a-zA-Z=&\\.]*"
     
     let predicate = NSPredicate(format: "SELF MATCHES %@", regStr)
     isMath = predicate.evaluate(with: u)
@@ -107,8 +107,9 @@ regStr = "(?<!s).*(?!D)"
 findWords(regStr: regStr, matchText: text)
 
 
+
 //找中文
-regStr = "[\\u4e00-\\u9fa5]"
+regStr = "[\\u4e00-\\u9fa5]+"
 findWords(regStr: regStr, matchText: text)
 
 text = "149390199010200918"
@@ -128,8 +129,16 @@ isMatch = isValidEmail(email: "chengxiang_yu@qq.xx.com")
 isMatch = isValidEmail(email: "9e838@qq.com")
 isMatch = isValidEmail(email: "9399484@qq.com")
 
-//var isMatch = isValidHttpUrl(url: "https://baidu.com")
-//print(isMatch)
+isMatch = isValidHttpUrl(url: "https://baidu.com:888")
+isMatch = isValidHttpUrl(url: "https://baidu.com:888/oeo/i2ke")
+isMatch = isValidHttpUrl(url: "https://baidu.com:888/oeo/i2ke?oeoe=llkd")
+isMatch = isValidHttpUrl(url: "http://baidu.com:888/oeo/i2ke?oeoe=llkd")
+print(isMatch)
+
+regStr = "[0-9]+[^0-9]+"
+text = "1,曾经沧海难为水2,除却巫山不是云2"
+findWords(regStr: regStr, matchText: text)
+
 
 
 
